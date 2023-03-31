@@ -17,12 +17,12 @@ foreignKey:'product_id'
 })
 
 // Products belongToMany Tags (through ProductTag)
-Product.belongToMany(Tag,{
+Product.belongToMany(Tag,{ through: 'ProductTag'
 
 })
 // Tags belongToMany Products (through ProductTag)
-Tag.belongToMany(Product,{
-  
+Tag.belongToMany(Product,{ through: 'ProductTag'
+
 })
 
 module.exports = {
